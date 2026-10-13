@@ -1,0 +1,465 @@
+/* =====================================================
+   media.css  -  Responsive styles for the portfolio
+   IMPORTANT: link this file AFTER port.css in <head>:
+   <link rel="stylesheet" href="css/port.css">
+   <link rel="stylesheet" href="css/media.css">
+   ===================================================== */
+
+/* ---------- Large laptops / small desktops ---------- */
+@media (max-width: 1400px) {
+    .some {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+        margin-top: -20px;
+    }
+}
+
+/* ---------- Laptops ---------- */
+@media (max-width: 1200px) {
+    nav,
+    footer,
+    .start,
+    .start_2 {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .part2 {
+        gap: 30px;
+    }
+    #img {
+        height: 400px;
+        margin-right: 60px;
+    }
+    .text_2 {
+        margin-right: 60px;
+    }
+    .child_2 {
+        margin-left: 80px;
+    }
+    .tool {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 0 30px;
+    }
+    .start_3 {
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .end {
+        right: 60px;
+    }
+    .mass_100,
+    .sub {
+        width: 480px;
+    }
+    .email_100,
+    .name_100 {
+        width: 235px;
+    }
+}
+
+/* ---------- Tablets (landscape + portrait) ---------- */
+@media (max-width: 992px) {
+    body {
+        min-height: auto;
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+        height: auto;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        row-gap: 10px;
+    }
+    .part2 {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 28px;
+    }
+
+    /* Make the <pre> blocks wrap on small screens */
+    pre {
+        white-space: normal;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .hello,
+    .moamen,
+    .gamal,
+    .text_3 {
+        display: block;
+    }
+    .gamal {
+        bottom: 0;
+        margin-bottom: 14px;
+    }
+
+    /* Hero */
+    .start {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 24px 50px;
+    }
+    .inf {
+        width: 100%;
+        max-width: 640px;
+    }
+    .con {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 20px;
+    }
+    .me {
+        margin-left: 0;
+    }
+    .social {
+        left: 0;
+        top: 0;
+        margin-top: 28px;
+        justify-content: center;
+    }
+    #img {
+        display: block;
+        height: auto;
+        width: 320px;
+        max-width: 100%;
+        margin: 40px auto 0;
+    }
+
+    /* About */
+    .start_2 {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 24px 50px;
+    }
+    #img_2 {
+        display: block;
+        width: 260px;
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .text_2 {
+        margin-right: 0;
+    }
+    .inf_2 {
+        margin-right: 0;
+        width: 100%;
+        max-width: 640px;
+    }
+    .text_3::after {
+        display: none;
+    }
+    .me_2 {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        margin-top: 10px;
+    }
+    .child_2 {
+        margin-left: 60px;
+        right: 0;
+        bottom: 0;
+    }
+    .age,
+    .edu,
+    .loc,
+    .inter {
+        margin-bottom: 14px;
+    }
+
+    /* Skills */
+    .skill_2 {
+        padding: 34px 24px 20px;
+        text-align: center;
+    }
+    .ski::before {
+        display: none;
+    }
+    .tool {
+        padding: 0 24px;
+    }
+
+    /* Projects */
+    .start_4 {
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .project_2 {
+        padding: 34px 24px;
+        text-align: center;
+    }
+    .some {
+        margin-top: -20px;
+        padding: 20px;
+    }
+    .burger,
+    .ana,
+    .my {
+        width: 100%;
+        max-width: 460px;
+    }
+    #burger,
+    #data,
+    #pro {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 402 / 228;
+        object-fit: cover;
+    }
+
+    /* Contact */
+    .start_5 {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px 40px;
+        gap: 30px;
+    }
+    .touch {
+        padding: 0;
+        text-align: center;
+    }
+    #touch::after {
+        display: none;
+    }
+    #email,
+    #num,
+    #coun {
+        padding-left: 0;
+        margin-bottom: 6px;
+    }
+    .end {
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 620px;
+        height: auto;
+        padding: 28px;
+    }
+    .name_100,
+    .email_100,
+    .mass_100,
+    .sub {
+        width: 100%;
+    }
+    .ema {
+        display: block;
+        left: 0;
+        margin-top: 12px;
+    }
+    .mass_200 {
+        margin-top: 8px;
+    }
+    .sub_200 {
+        margin-top: 8px;
+        margin-bottom: 14px;
+    }
+    .sub {
+        top: 10px;
+    }
+
+    /* Footer */
+    footer {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+/* ---------- Small tablets / large phones ---------- */
+@media (max-width: 768px) {
+    nav {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .part2 {
+        gap: 20px;
+        font-size: 15px;
+    }
+    .moamen {
+        font-size: 36px;
+    }
+    .gamal {
+        font-size: 34px;
+    }
+    #img {
+        width: 280px;
+    }
+    .me_2 {
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .child,
+    .child_2 {
+        margin-left: 40px;
+    }
+    #tools {
+        width: 70px;
+    }
+    .tool {
+        gap: 20px;
+    }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 576px) {
+    nav,
+    footer,
+    .start,
+    .start_2 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .code {
+        font-size: 20px;
+    }
+    #cv {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    .part2 {
+        gap: 14px;
+        font-size: 14px;
+    }
+
+    .moamen {
+        font-size: 30px;
+    }
+    .gamal {
+        font-size: 28px;
+    }
+    .text,
+    .text_2 {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .view,
+    .me {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .social {
+        gap: 20px;
+    }
+    #img {
+        width: 230px;
+    }
+    #img_2 {
+        width: 210px;
+    }
+    .text_3 {
+        font-size: 20px;
+    }
+
+    .ski {
+        font-size: 24px;
+    }
+    #project_2 {
+        font-size: 24px;
+    }
+    #tools {
+        width: 60px;
+    }
+    #tool {
+        font-size: 14px;
+    }
+    .tool {
+        gap: 14px;
+        padding: 0 12px;
+    }
+    #tool:hover {
+        box-shadow: 0 0 6px 4px #38bdf8;
+    }
+
+    .some {
+        padding: 10px;
+        gap: 24px;
+    }
+    .burger,
+    .ana,
+    .my {
+        padding: 16px;
+    }
+    .rest,
+    .data,
+    .pro {
+        font-size: 22px;
+    }
+    .simp,
+    .dash,
+    .this {
+        font-size: 14px;
+    }
+
+    #touch {
+        font-size: 22px;
+    }
+    .end {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .jamal {
+        font-size: 13px;
+    }
+    .social_3 {
+        gap: 20px;
+    }
+}
+
+/* ---------- Very small phones ---------- */
+@media (max-width: 400px) {
+    nav {
+        justify-content: center;
+    }
+    .part2 {
+        gap: 10px;
+        font-size: 13px;
+    }
+    .moamen {
+        font-size: 26px;
+    }
+    .gamal {
+        font-size: 24px;
+    }
+    #img {
+        width: 200px;
+    }
+    #img_2 {
+        width: 180px;
+    }
+    #tools {
+        width: 52px;
+    }
+    #tool {
+        font-size: 12px;
+    }
+    .child,
+    .child_2 {
+        margin-left: 36px;
+    }
+    .con {
+        flex-direction: column;
+        align-items: center;
+    }
+}
