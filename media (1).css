@@ -1,0 +1,690 @@
+/* =====================================================
+   media.css - Responsive styles for the portfolio
+   Link it AFTER port.css:
+   <link rel="stylesheet" href="css/port.css">
+   <link rel="stylesheet" href="css/media.css">
+
+   Breakpoints:
+   base (all sizes) | 993-1560 | 993-1200 | <=992 | <=768 | <=640 | <=576 | <=400
+   ===================================================== */
+
+
+/* =====================================================
+   BASE FIXES (all screen sizes)
+   Fixed heights (vh / px) were causing overflow, so
+   sections now grow with their content.
+   ===================================================== */
+body {
+    min-height: 0;
+}
+nav,
+footer {
+    height: auto;
+    min-height: 60px;
+}
+.start,
+.start_2 {
+    height: auto;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.start {
+    min-height: 63vh;
+}
+.start_2 {
+    min-height: 55vh;
+}
+.start_3 {
+    height: auto;
+    padding-bottom: 40px;
+}
+.start_4 {
+    height: auto;
+    padding-bottom: 50px;
+}
+.start_5 {
+    height: auto;
+    min-height: 221px;
+    padding-bottom: 30px;
+    background-size: cover;
+    background-position: center;
+}
+/* typed text was black on a dark background */
+.name_100,
+.email_100,
+.mass_100 {
+    color: #fff;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   LAPTOPS / SMALL DESKTOPS  (993px -> 1560px)
+   Everything shrinks smoothly with the screen width.
+   ===================================================== */
+@media (min-width: 993px) and (max-width: 1560px) {
+
+    /* Navbar */
+    .part2 {
+        gap: clamp(24px, 3vw, 52px);
+    }
+
+    /* <pre> blocks: keep line breaks, drop the indentation hack, allow wrapping */
+    pre {
+        white-space: pre-line;
+        margin-left: 0;
+    }
+
+    /* Hero */
+    .start {
+        column-gap: 24px;
+    }
+    .inf {
+        min-width: 0;
+    }
+    .img {
+        flex: none;
+    }
+    #img {
+        height: clamp(300px, 30vw, 465px);
+        width: auto;
+        max-width: none;
+        margin-right: clamp(0px, 14vw, 245px);
+    }
+
+    /* About */
+    .start_2 {
+        column-gap: 20px;
+    }
+    .img_2 {
+        flex: none;
+    }
+    #img_2 {
+        width: clamp(220px, 19.7vw, 307px);
+        margin: 30px clamp(10px, 1.9vw, 30px);
+    }
+    .inf_2 {
+        flex: 1;
+        min-width: 0;
+        margin-right: 0;
+    }
+    .text_2 {
+        margin-right: 0;
+    }
+    .child_2 {
+        margin-left: clamp(60px, 10.4vw, 162px);
+    }
+
+    /* Skills */
+    .skill_2 {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .tool {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 40px;
+        gap: 24px clamp(16px, 2.6vw, 50px);
+    }
+
+    /* Projects */
+    .project_2 {
+        padding: 34px 40px;
+    }
+    .some {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(16px, 2vw, 38px);
+        margin: -42px 0 0;
+        padding: 27px 40px;
+    }
+    .burger,
+    .ana,
+    .my {
+        padding: clamp(12px, 1.5vw, 23px);
+    }
+    #burger,
+    #data,
+    #pro {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 402 / 228;
+        object-fit: cover;
+    }
+    .rest,
+    .data,
+    .pro {
+        font-size: clamp(18px, 1.8vw, 27px);
+    }
+    .simp,
+    .dash,
+    .this {
+        font-size: clamp(13px, 1.15vw, 16px);
+    }
+
+    /* Contact */
+    .start_5 {
+        padding: 30px 40px;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .touch {
+        flex: 0 1 auto;
+        padding: 16px 0 0 clamp(0px, 3.6vw, 57px);
+    }
+    .end {
+        flex: 0 1 640px;
+        min-width: 0;
+        top: 0;
+        right: 0;
+        height: auto;
+        padding: clamp(20px, 2.2vw, 34px);
+    }
+    .name_100 {
+        display: inline-block;
+        width: calc(50% - 8px);
+        vertical-align: top;
+    }
+    .ema {
+        width: calc(50% - 8px);
+        left: 16px;
+        vertical-align: top;
+    }
+    .email_100 {
+        display: block;
+        width: 100%;
+    }
+    .mass_200,
+    .sub_200 {
+        margin-top: 12px;
+    }
+    .mass_100,
+    .sub {
+        display: block;
+        width: 100%;
+        top: 0;
+    }
+
+    /* Footer */
+    footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+
+/* =====================================================
+   SMALL LAPTOPS  (993px -> 1200px)
+   ===================================================== */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .text,
+    .text_2 {
+        font-size: 15px;
+    }
+    .moamen {
+        font-size: 38px;
+    }
+    .gamal {
+        font-size: 36px;
+    }
+    .con .me {
+        margin-left: 14px;
+    }
+    .social {
+        gap: 22px;
+    }
+}
+
+
+/* =====================================================
+   TABLETS  (<= 992px)
+   Everything becomes a single column.
+   ===================================================== */
+@media (max-width: 992px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 24px;
+        row-gap: 10px;
+    }
+    .part2 {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 28px;
+    }
+
+    /* <pre> blocks */
+    pre {
+        white-space: pre-line;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* Hero */
+    .start {
+        min-height: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 24px 50px;
+    }
+    .inf {
+        width: 100%;
+        max-width: 640px;
+    }
+    .con {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 20px;
+    }
+    .me {
+        margin-left: 0;
+    }
+    .social {
+        left: 0;
+        top: 0;
+        margin-top: 28px;
+        justify-content: center;
+    }
+    #img {
+        display: block;
+        height: auto;
+        width: 320px;
+        max-width: 100%;
+        margin: 40px auto 0;
+    }
+
+    /* About */
+    .start_2 {
+        min-height: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 24px 50px;
+    }
+    #img_2 {
+        display: block;
+        width: 260px;
+        max-width: 100%;
+        margin: 10px auto;
+    }
+    .inf_2 {
+        margin-right: 0;
+        width: 100%;
+        max-width: 640px;
+    }
+    .text_2 {
+        margin-right: 0;
+    }
+    .text_3::after {
+        display: none;
+    }
+    .me_2 {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        margin-top: 10px;
+    }
+    .child_2 {
+        margin-left: 60px;
+        right: 0;
+        bottom: 0;
+    }
+    .age,
+    .edu,
+    .loc,
+    .inter {
+        margin-bottom: 14px;
+    }
+
+    /* Skills */
+    .skill_2 {
+        padding: 34px 24px 20px;
+        text-align: center;
+    }
+    .ski::before {
+        display: none;
+    }
+    .tool {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 24px;
+    }
+
+    /* Projects */
+    .project_2 {
+        padding: 34px 24px;
+        text-align: center;
+    }
+    .some {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin: -20px 0 0;
+        padding: 20px 24px;
+    }
+    .burger,
+    .ana,
+    .my {
+        width: calc(50% - 12px);
+        max-width: 460px;
+        padding: 16px;
+    }
+    #burger,
+    #data,
+    #pro {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 402 / 228;
+        object-fit: cover;
+    }
+    .rest,
+    .data,
+    .pro {
+        font-size: 22px;
+    }
+    .simp,
+    .dash,
+    .this {
+        font-size: 14px;
+    }
+
+    /* Contact */
+    .start_5 {
+        min-height: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px 40px;
+        gap: 30px;
+    }
+    .touch {
+        padding: 0;
+        text-align: center;
+    }
+    #touch::after {
+        display: none;
+    }
+    #email,
+    #num,
+    #coun {
+        padding-left: 0;
+        margin-bottom: 6px;
+    }
+    .end {
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 620px;
+        height: auto;
+        padding: 28px;
+    }
+    .name_100 {
+        display: block;
+        width: 100%;
+    }
+    .ema {
+        display: block;
+        width: 100%;
+        left: 0;
+        margin-top: 12px;
+    }
+    .email_100 {
+        display: block;
+        width: 100%;
+    }
+    .mass_200,
+    .sub_200 {
+        margin-top: 12px;
+    }
+    .mass_100,
+    .sub {
+        display: block;
+        width: 100%;
+        top: 0;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding: 16px 24px;
+    }
+    .social_3 {
+        gap: 24px;
+    }
+}
+
+
+/* =====================================================
+   SMALL TABLETS  (<= 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+    nav {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    .part2 {
+        gap: 10px 20px;
+        font-size: 15px;
+    }
+    .moamen {
+        font-size: 36px;
+    }
+    .gamal {
+        font-size: 34px;
+    }
+    #img {
+        width: 280px;
+    }
+
+    /* About text wraps normally */
+    .text_2 {
+        white-space: normal;
+    }
+    .text_3 {
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    .me_2 {
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        margin: 10px auto 0;
+    }
+    .child,
+    .child_2 {
+        margin-left: 40px;
+    }
+    #tools {
+        width: 70px;
+    }
+    .tool {
+        gap: 20px;
+    }
+}
+
+
+/* =====================================================
+   LARGE PHONES  (<= 640px) - project cards in one column
+   ===================================================== */
+@media (max-width: 640px) {
+    .burger,
+    .ana,
+    .my {
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   PHONES  (<= 576px)
+   ===================================================== */
+@media (max-width: 576px) {
+    nav,
+    footer,
+    .start,
+    .start_2 {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .code {
+        font-size: 20px;
+    }
+    #cv {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    .part2 {
+        gap: 8px 14px;
+        font-size: 14px;
+    }
+
+    /* Hero text wraps normally on phones */
+    .text {
+        white-space: normal;
+    }
+    .hello,
+    .moamen,
+    .gamal {
+        display: block;
+    }
+    .gamal {
+        bottom: 0;
+        margin-bottom: 12px;
+    }
+    .moamen {
+        font-size: 30px;
+    }
+    .gamal {
+        font-size: 28px;
+    }
+    .text,
+    .text_2 {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    .view,
+    .me {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    .social {
+        gap: 20px;
+    }
+    #img {
+        width: 230px;
+    }
+    #img_2 {
+        width: 210px;
+    }
+    .text_3 {
+        font-size: 20px;
+    }
+
+    .ski {
+        font-size: 24px;
+    }
+    #project_2 {
+        font-size: 24px;
+    }
+    #tools {
+        width: 60px;
+    }
+    #tool {
+        font-size: 14px;
+    }
+    .tool {
+        gap: 14px;
+        padding: 0 12px;
+    }
+    #tool:hover {
+        box-shadow: 0 0 6px 4px #38bdf8;
+    }
+
+    .some {
+        padding: 10px;
+        gap: 24px;
+    }
+    .burger,
+    .ana,
+    .my {
+        padding: 16px;
+    }
+    .rest,
+    .data,
+    .pro {
+        font-size: 22px;
+    }
+
+    #touch {
+        font-size: 22px;
+    }
+    .end {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .jamal {
+        font-size: 13px;
+    }
+    .social_3 {
+        gap: 20px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES  (<= 400px)
+   ===================================================== */
+@media (max-width: 400px) {
+    nav {
+        justify-content: center;
+    }
+    .part2 {
+        gap: 8px 10px;
+        font-size: 13px;
+    }
+    .moamen {
+        font-size: 26px;
+    }
+    .gamal {
+        font-size: 24px;
+    }
+    #img {
+        width: 200px;
+    }
+    #img_2 {
+        width: 180px;
+    }
+    #tools {
+        width: 52px;
+    }
+    #tool {
+        font-size: 12px;
+    }
+    .child,
+    .child_2 {
+        margin-left: 36px;
+    }
+    .con {
+        flex-direction: column;
+        align-items: center;
+    }
+}
